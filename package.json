@@ -1,0 +1,16 @@
+{
+  "name": "mplads-risk-intelligence-platform",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Convenience scripts for the monorepo (backend: FastAPI, frontend: React).",
+  "scripts": {
+    "backend:dev": "python -m uvicorn backend.app.main:app --reload --port 8000",
+    "backend:seed": "python -m database.seed --reset",
+    "backend:test": "python -m pytest backend/tests -q",
+    "frontend:install": "npm --prefix frontend install",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "pdfs": "python -m database.generate_sample_pdfs",
+    "schema": "python -m database.export_schema"
+  }
+}
